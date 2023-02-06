@@ -3,4 +3,5 @@ I love listening metal music, and especially black metal. In this project, I tri
 * Data Collection
 * Data Preprocessing
 * Model Training
-You can listen couple of generated tracks by following this link(https://soundcloud.com/oemer-faruk-kolcak/sets/ai-generated-darkside-drums).
+
+You can listen couple of generated tracks by following this [link](https://soundcloud.com/oemer-faruk-kolcak/sets/ai-generated-darkside-drums).
