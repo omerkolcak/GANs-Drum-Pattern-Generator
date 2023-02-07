@@ -24,4 +24,6 @@ Now that generator can generate the images, generated images should be converted
 python generate_drum_patterns.py --bpm=100 --track-nums=10 --weights=models/model_5976.h5
 ```
 Bpm sets the tempo of the track, and track-nums is used for how many tracks we want to generate. Also, you can try different models by changing the weights parameter. Generated images and corresponding tracks are saved into the [generated-tracks/](https://github.com/omerkolcak/GANs-Drum-Pattern-Generator/tree/main/generated-tracks) folder. You can listen some of the generated tracks.
+<html>
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1566529909&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+</html>
