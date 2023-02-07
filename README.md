@@ -16,4 +16,10 @@ All the images in the dataset are 25x256, where height denotes the notes that ar
 ## Model Training
 GAN model architecture is used from [here](https://machinelearningmastery.com/practical-guide-to-gan-failure-modes/) with minor modifications on the network. Latent space is set to 50. Model is trained for 6000 thousand iterations on GPU P100. The below figure shows the generated images at different epochs.  </br>
 ![alt text for screen readers](readme-images/results_by_iteration.png "Results by Iteration")
+
+It is hard to evaluate the performance of GANs. There are different metrics like FID scores, KID scores, and others. Manually evaluating the models is another approach, and it is reliable but it requires human labouring. I evaluated manually by inspecting results of the model and listening the generated tracks. As above figure shows, first 400 epochs are very bad and completely random. In the 1000s iteration, it starts to improve but it is still random notes. The model starts to generate reasonable results by the 1500s iterations. In the iteration 3000s and 5000s, model generates really good results. You can experience with different models in the model/ folder.
 ## Image to Midi
+Now that generator can generate the images, generated images should be converted to midi files. Images can be generated and converted to midi files as follows:
+```
+python generate_drum_patterns.py --bpm=100 --track-nums=10 --weights=models/model_5976.h5
+```
