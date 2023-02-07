@@ -18,11 +18,18 @@ GAN model architecture is used from [here](https://machinelearningmastery.com/pr
 ![alt text for screen readers](readme-images/results_by_iteration.png "Results by Iteration")
 
 It is hard to evaluate the performance of GANs. There are different metrics like FID scores, KID scores, and others. Manually evaluating the models is another approach, and it is reliable but it requires human labouring. I evaluated manually by inspecting results of the model and listening the generated tracks. As above figure shows, first 400 epochs are very bad and completely random. In the 1000s iteration, it starts to improve but it is still random notes. The model starts to generate reasonable results by the 1500s iterations. In the iteration 3000s and 5000s, model generates really good results. You can experience with different models in the [model/](https://github.com/omerkolcak/GANs-Drum-Pattern-Generator/tree/main/models) folder.
+
 ## Image to Midi
 Now that generator can generate the images, generated images should be converted to midi files. Images can be generated and converted to midi files as follows:
 ```
 python generate_drum_patterns.py --bpm=100 --track-nums=10 --weights=models/model_5976.h5
 ```
-Bpm sets the tempo of the track, and track-nums is used for how many tracks we want to generate. Also, you can try different models by changing the weights parameter. Generated images and corresponding tracks are saved into the [generated-tracks/](https://github.com/omerkolcak/GANs-Drum-Pattern-Generator/tree/main/generated-tracks) folder. You can listen some of the generated tracks.
+Bpm sets the tempo of the track, and track-nums is used for how many tracks we want to generate. Also, you can try different models by changing the weights parameter. Generated images and corresponding tracks are saved into the [generated-tracks/](https://github.com/omerkolcak/GANs-Drum-Pattern-Generator/tree/main/generated-tracks) folder. You can listen some of the generated tracks by following this [link](https://soundcloud.com/oemer-faruk-kolcak/sets/ai-generated-darkside-drums).
 
-<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1566529909&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+## Further Improvement
+For further improvement, Transformer arhitectures can be trained to see how well it performs. The music is sequential data and depends on time. By using Transformer arhtictures, time information can be captured. 
+
+## Resources Used
+* https://towardsdatascience.com/neural-networks-generated-lamb-of-god-drum-tracks-45d3a235e13a
+* https://keunwoochoi.wordpress.com/2016/02/23/lstmetallica/
+* https://towardsdatascience.com/bachgan-using-gans-to-generate-original-baroque-music-10c521d39e52
