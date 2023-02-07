@@ -33,3 +33,4 @@ For further improvement, Transformer arhitectures can be trained to see how well
 * https://towardsdatascience.com/neural-networks-generated-lamb-of-god-drum-tracks-45d3a235e13a
 * https://keunwoochoi.wordpress.com/2016/02/23/lstmetallica/
 * https://towardsdatascience.com/bachgan-using-gans-to-generate-original-baroque-music-10c521d39e52
+* https://machinelearningmastery.com/practical-guide-to-gan-failure-modes/
